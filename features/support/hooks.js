@@ -12,4 +12,6 @@ After(function (testCase) {
 
   console.log(`End test scenario with name: ${testCase.pickle.name} from feature file: ${testCase.sourceLocation.uri}`)
   console.log(testCase.result)
+
+  return this.driver.quit();
 })
