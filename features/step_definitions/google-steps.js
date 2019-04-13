@@ -8,14 +8,6 @@ Given("I navigate to the url {string}", function(url) {
   return this.driver.get(url)
 })
 
-// To determine whether Google has loaded we assume the page has loaded when there is an image with alt text 'Google'
-Then('I should see the google search engine', async function() {
-  const world = this
-
-  const element = await world.driver.findElement(By.xpath('//img[@alt="Google"]'))
-  await world.driver.wait(until.elementIsVisible(element)) 
-})
-
 When('I do a search for {string}', function(searchText) {
   const world = this
 
